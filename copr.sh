@@ -20,7 +20,7 @@ VERFULL=$(sed 's/^.*release //;s/ (Fin.*$//' /etc/redhat-release)
 VER=${VERFULL:0:1} # return 8
 fi
 if [ "$OS" = "Fedora" ] ; then
-wget https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el$VER/buildsys-build-rpmfusion.spec -O buildsys-build-rpmfusion.spec
+wget https://github.com/andykimpe/buildsys-build-rpmfusion/raw/f$VER/buildsys-build-rpmfusion.spec -O buildsys-build-rpmfusion.spec
 else
 wget https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el$VER/buildsys-build-rpmfusion.spec -O buildsys-build-rpmfusion.spec
 fi
