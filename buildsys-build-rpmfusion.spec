@@ -1,4 +1,5 @@
 %define repo rpmfusion
+%define branch f39
 
 Name:           buildsys-build-%{repo}
 Epoch:          11
