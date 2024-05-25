@@ -2,7 +2,7 @@
 
 Name:           buildsys-build-%{repo}
 Epoch:          10
-Version:        24
+Version:        25
 Release:        0.2
 Summary:        Tools and files used by the %{repo} buildsys 
 
@@ -11,9 +11,9 @@ License:        MIT
 URL:            http://rpmfusion.org
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Source2:        %{name}-list-kernels.sh
-Source5:        %{name}-README
-Source11:       %{name}-kerneldevpkgs-current
+Source2:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el5/%{name}-list-kernels.sh
+Source5:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el5/%{name}-README
+Source11:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el5/%{name}-kerneldevpkgs-current
 
 # provide this to avoid a error when generating akmods packages
 Provides:       buildsys-build-rpmfusion-kerneldevpkgs-akmod-%{_target_cpu}
