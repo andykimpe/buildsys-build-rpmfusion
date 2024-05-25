@@ -1,9 +1,10 @@
 %define repo rpmfusion
+%define branch el7
 
 Name:           buildsys-build-%{repo}
 Epoch:          11
 Version:        20
-Release:        110
+Release:        111
 Summary:        Tools and files used by the %{repo} buildsys 
 
 Group:          Development/Tools
@@ -11,10 +12,10 @@ License:        MIT
 URL:            http://rpmfusion.org
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Source2:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el7/%{name}-list-kernels.sh
-Source5:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el7/%{name}-README
-Source11:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el7/%{name}-kerneldevpkgs-current
-Source20:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el7/%{name}-macros
+Source2:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-list-kernels.sh
+Source5:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-README
+Source11:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-kerneldevpkgs-current
+Source20:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-macros
 
 # provide this to avoid a error when generating akmods packages
 Provides:       buildsys-build-rpmfusion-kerneldevpkgs-akmod-%{_target_cpu}
