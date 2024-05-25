@@ -1,4 +1,5 @@
 %define repo rpmfusion
+%define branch el6
 
 Name:           buildsys-build-%{repo}
 Epoch:          11
@@ -11,9 +12,9 @@ License:        MIT
 URL:            http://rpmfusion.org
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Source2:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el6/%{name}-list-kernels.sh
-Source5:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el6/%{name}-README
-Source11:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/el6/%{name}-kerneldevpkgs-current
+Source2:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-list-kernels.sh
+Source5:        https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-README
+Source11:       https://github.com/andykimpe/buildsys-build-rpmfusion/raw/%{branch}/%{name}-kerneldevpkgs-current
 
 # provide this to avoid a error when generating akmods packages
 Provides:       buildsys-build-rpmfusion-kerneldevpkgs-akmod-%{_target_cpu}
